@@ -1,0 +1,581 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: gray;
+}
+
+
+.navbar {
+  background: #1a1a1a;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px; /* Set fixed height */
+  position: fixed !important;
+  width: 100%;
+  top: 0;
+  z-index: 5000000;
+}
+.container{
+  padding-top: 60px !important;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+.logo a{
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+}
+.logo a:hover{
+    color: #E14434;
+    cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #E14434;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #E14434;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+.typed-text {
+      font-weight: bold;
+      color: #00ffd5;
+    }
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1em;
+      background: #00ffd5;
+      animation: blink 0.7s infinite;
+      vertical-align: bottom;
+      margin-left: 3px;
+    }
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+
+
+
+
+
+    /* From Uiverse.io by firemonste_8052 */ 
+ul {
+  list-style: none;
+}
+.social-links{
+  display: grid;
+  place-items: center;
+}
+.example-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder; /* Made bolder */
+  background-color: #000; /* Black background */
+  border-radius: 30px; /* Added border-radius to make the container rounded */
+  padding: 20px; /* Added padding for better appearance */
+  height: 50px;
+  width: fit-content;
+}
+
+.example-1 .icon-content {
+  margin: 0 10px;
+  position: relative;
+  font-weight: bolder; /* Made bolder */
+}
+
+.example-1 .icon-content .tooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  width: 100px;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-weight: bolder; /* Made bolder */
+  text-align: center;
+}
+
+.example-1 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: -50px;
+}
+
+.example-1 .icon-content .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff; /* White icons */
+  background-color: #000; /* Black background */
+  transition: all 0.3s ease-in-out;
+  font-weight: bolder; /* Made bolder */
+}
+
+.example-1 .icon-content .link:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-1 .icon-content .link svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff; /* White icons */
+}
+
+.example-1 .icon-content .link[data-social="Git"]:hover {
+  color: #f800f8;
+}
+
+.example-1 .icon-content .link[data-social="Linked"]:hover {
+  color: hsl(213, 100%, 50%);
+}
+
+.example-1 .icon-content .link[data-social="Facebook"]:hover {
+  color: #4015da;
+}
+
+.example-1 .icon-content .link[data-social="whatsapp"]:hover {
+  color: #23b100;
+}
+
+.example-1 .icon-content .link[data-social="Instragram"]:hover {
+  color: #fd09bc;
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.button {
+  font-size: 16px !important;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 10px;
+  color: rgb(100, 120, 223);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(50, 126, 170);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover::before {
+  scale: 3;
+}
+
+.button:hover {
+  color: #e80a0a;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(214, 47, 47, 0.4);
+}
+
+.button:active {
+  scale: 1;
+}
+
+/* From Uiverse.io by mrhyddenn */
+.cv{
+  display: grid;
+  place-items: center;
+} 
+.button-cv {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+
+.button-cv::before,
+.button-cv::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
+}
+
+.button-cv::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.button-cv::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button-cv:active,
+.button-cv:focus {
+  outline: none;
+}
+
+.button-cv:active::before,
+.button-cv:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button-cv:active::before {
+  top: 3px;
+}
+
+.button-cv:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all .2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #ff4655;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button-cv:hover {
+  color: #0f1923;
+}
+
+.button-cv:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.button-cv:hover .button_lg::after {
+  background-color: #fff;
+}
+
+
+/* resume */
+.Resume p{
+  font-size: 16px;
+  font-weight: 400; 
+  color: #4015da;
+  text-align: center;
+}
+.Resume h1{
+  color: red;
+  font-size: 25px;
+  font-weight: 600;
+}
+.Resume h2{
+  font-size: 20px;
+  color: blue;
+  font-weight: 500;
+}
+.Resume h6{
+  font-size: 16px;
+}
+
+
+/* Services */
+/* From Uiverse.io by Rodrypaladin */ 
+.card-service {
+  width: auto;
+  padding: 10px;
+  background-image: linear-gradient(to right bottom, #5d0391, #7b05ae, #9b05cb, #bd00e7, #bd00e7);
+  background-size: 200% 200%;
+  border-radius: 12px;
+}
+
+.card-int {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.img-service {
+  width: 100%;
+  height: 175px;
+  background-color: pink;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-data {
+  padding: 20px;
+  font-size: 14px;
+}
+
+.card-service:hover{
+  animation: gradient 0.8s ease-in 1;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 200% 200%;
+  }
+
+  100% {
+    background-position: 400% 400%;
+  }
+}
+
+.carousel-item img {
+      height: 90vh; /* Optional: Sets a fixed height for all images */
+      object-fit:fill; /* Optional: Ensures images fill the space without distortion */
+    }
+
+  /* From Uiverse.io by mrhyddenn */ 
+.container-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box {
+  width: auto;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  height: 350px;
+  border-radius: 20px;
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  cursor: pointer;
+  transition: all .3s;
+  color: green;
+}
+
+.card_box:hover {
+  transform: scale(0.9);
+}
+.card_box img{
+  width:auto;
+  height: 250px;
+  object-fit: fill;
+}
+
+/*  */
+/* From Uiverse.io by andrew-demchenk0 */ 
+.project-card {
+  --font-color: #323232;
+  --bg-color: #e0e0e0;
+  width: fit-content;
+  height: 350px;
+  border-radius: 20px;
+  background: var(--bg-color);
+  box-shadow: -9px 9px 18px #5a5a5a,
+              9px -9px 18px #ffffff;
+  display: flex;
+  flex-direction: column;
+  transition: .4s;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px 2px #5a5a5a;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  background-color: blueviolet;
+}
+
+.card__descr-wrapper {
+  padding: 15px;
+  display: grid;
+}
+
+.card__title {
+  color: var(--font-color);
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.card__descr {
+  color: var(--font-color);
+}
+
+.svg {
+  width: 25px;
+  height: 25px;
+  transform: translateY(25%);
+  fill: var(--font-color);
+}
+
+.card__links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+.card__links .link {
+  color: var(--font-color);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.card__links .link:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background:#5EABD6;
+    color: #E14434;
+    opacity: 0.5;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 10px 20px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+}
