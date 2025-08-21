@@ -553,6 +553,82 @@ ul {
 .card__links .link:hover {
   text-decoration: underline;
 }
+.box-1 a,.box-2 a,.box-3 a{
+  text-decoration: none;
+  color:black;
+}
+.icon-contact svg{
+  width: 50px;
+   background-image: radial-gradient(orange,green)
+}
+
+/* From Uiverse.io by HoseinParvaresh */ 
+::selection {
+  background-color: gray;
+}
+
+.container-form {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 800px;
+  height: 550px;
+  background-image: linear-gradient(to bottom, #424242, #212121);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+.title {
+  color: wheat;
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.input {
+  margin: 0.5rem 0;
+  padding: 1rem 0.5rem;
+  width: 30rem;
+  background-color: inherit;
+  color: wheat;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid wheat;
+  transition: all 400ms;
+}
+.input:hover {
+  background-color: #424242;
+  border: none;
+  border-radius: 0.5rem;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.btn-form {
+  height: 3rem;
+  width: 20rem;
+  margin-top: 3rem;
+  background-color: wheat;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  transition: all 400ms;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px antiquewhite,
+    0 0 10px antiquewhite;
+}
+.btn-form:hover {
+  background-color: antiquewhite;
+  box-shadow: none;
+}
 
 
 
