@@ -22,7 +22,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 // Email setup
 $to      = "pattirukmangada2002@gmail.com";   // 🔴 Change this to your receiving email
-$subject = "New Comment from {$name}";
+$subject = "New Comment fromphp -v
+ {$name}";
 
 $body  = "You received a new comment:\n\n";
 $body .= "Name: {$name}\n";

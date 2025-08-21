@@ -45,3 +45,13 @@ const textArray = ["Web Developer", "Freelancer", "Aws Cloud Engineer", "Digital
     document.addEventListener("DOMContentLoaded", function () {
       setTimeout(type, 1000);
     });
+
+    (function(){
+    emailjs.init("service_qa7uoqj"); // from EmailJS dashboard
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_qa7uoqj', '__ejs-test-mail-service__', this)
+      .then(() => { alert('Message Sent!'); }, (err) => { alert(JSON.stringify(err)); });
+  });
