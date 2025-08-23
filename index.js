@@ -46,12 +46,21 @@ const textArray = ["Web Developer", "Freelancer", "Aws Cloud Engineer", "Digital
       setTimeout(type, 1000);
     });
 
-    (function(){
-    emailjs.init("service_qa7uoqj"); // from EmailJS dashboard
-  })();
+ const form = document.getElementById("contact-form");
 
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    emailjs.sendForm('service_qa7uoqj', '__ejs-test-mail-service__', this)
-      .then(() => { alert('Message Sent!'); }, (err) => { alert(JSON.stringify(err)); });
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault(); // stop normal form submit
+
+    let response = await fetch(this.action, {
+      method: this.method,
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      alert("✅ Message sent successfully!");
+      form.reset(); // <-- clears all inputs & textarea
+    } else {
+      alert("❌ Oops! Something went wrong. Try again.");
+    }
   });

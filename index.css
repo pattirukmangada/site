@@ -488,7 +488,7 @@ ul {
   --font-color: #323232;
   --bg-color: #e0e0e0;
   width: fit-content;
-  height: 350px;
+  height: 500px;
   border-radius: 20px;
   background: var(--bg-color);
   box-shadow: -9px 9px 18px #5a5a5a,
@@ -497,6 +497,11 @@ ul {
   flex-direction: column;
   transition: .4s;
   position: relative;
+}
+.card__img img{
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
 }
 
 .project-card:hover {
@@ -575,7 +580,7 @@ ul {
 }
 
 .form {
-  width: 800px;
+  width: 850px;
   height: 550px;
   background-image: linear-gradient(to bottom, #424242, #212121);
   display: flex;
@@ -593,7 +598,7 @@ ul {
 .input {
   margin: 0.5rem 0;
   padding: 1rem 0.5rem;
-  width: 30rem;
+  width: 25rem;
   background-color: inherit;
   color: wheat;
   border: none;
@@ -613,8 +618,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .btn-form {
   height: 3rem;
-  width: 20rem;
-  margin-top: 3rem;
+  width: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: wheat;
   border-radius: 0.5rem;
   border: none;
@@ -641,6 +647,7 @@ input[type=number]::-webkit-outer-spin-button {
   .nav-links {
     position: absolute;
     top: 60px;
+    height: 400px;
     left: 0;
     right: 0;
     background:#5EABD6;
@@ -649,9 +656,13 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: column;
     align-items: center;
     display: none;
-    padding: 10px 20px;
+    gap: 30px;
+    padding: 50px 25px;
   }
   .nav-links.show {
     display: flex;
+  }
+  .container iframe{
+    width: 400 !important;
   }
 }
